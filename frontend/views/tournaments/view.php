@@ -5,17 +5,37 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Tournaments */
-$soyAdmin=true;
+
 $this->title = $model->tournament_name;
 $this->params['breadcrumbs'][] = ['label' => 'Tournaments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
+//Es admin el usuario
+if(!Yii::$app->user->isGuest && $model->tournament_admin==Yii::$app->user->identity->id){
+  $soyAdmin=true;
+}else{
+  $soyAdmin=false;
+}
+echo 'status: '.$model->tournament_status;
+
+
+if($model->tournament_status=='open' || $model->tournament_status=='started'){
+  $abierto=true;
+}else{
+  $abierto=false;
+}
 ?>
 <div class="tournaments-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    
     <p>
-        <?php echo '<button id="reset-bracket" class="btn btn-default">Balanced sorting</button>'; ?>
+        <?php if($soyAdmin){ ?>
+        <?php
+        if($abierto){
+          echo '<button id="reset-bracket" class="btn btn-default">Balanced sorting</button>';
+        }
+        ?>
         <?= Html::a('Update', ['update', 'id' => $model->tournament_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->tournament_id], [
             'class' => 'btn btn-danger',
@@ -25,10 +45,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) 
         ?>
+        <?php } ?>
     </p>
 
      <?php 
-        if($soyAdmin==true){
+        if($soyAdmin==true && $abierto==true){
           echo '
           <script type="text/javascript">
               var vBracket=1;
@@ -50,6 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
    
    <div id="autoComplete" name='bracket'>    
     </div>
+    <br><br>
     
     <?= DetailView::widget([
         'model' => $model,

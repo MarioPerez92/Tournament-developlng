@@ -18,11 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'tournament_status')->dropDownList([ 'open' => 'Open', 'close' => 'Close', 'started' => 'Started', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'tournament_start_date')->textInput() ?>
-
-    <?= $form->field($model, 'tournament_end_date')->textInput() ?>
-
-    <?= $form->field($model, 'tournament_json')->textarea(['rows' => 6]) ?>
+    <!--<?= $form->field($model, 'tournament_start_date')->textInput() ?>-->
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
