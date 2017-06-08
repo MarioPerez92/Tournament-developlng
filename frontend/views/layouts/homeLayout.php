@@ -145,33 +145,33 @@ HomeAsset::register($this);
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Ready to simplify tournament management?</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">Multitude of functions</h4>
+                    <p class="text-muted">Create box of single or double eliminators, leagues, schedules and rankigs. User registration, visitor logging, hybrid tournaments and more.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-group fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">Social Tools</h4>
+                    <p class="text-muted">Integrate and share your tournament. Collaborate with multiple administrators and chat with users in real-time.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">Access from anywhere</h4>
+                    <p class="text-muted">BracketCloud keeps all your tournaments in the cloud for seamless access from any computer, tablet or phone.</p>
                 </div>
             </div>
         </div>
@@ -190,8 +190,8 @@ HomeAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">DEVELOPERS</h2>
+                    <h3 class="section-subheading text-muted">Creating and sharing your tournaments is easy.</h3>
                 </div>
             </div>
             <div class="row">
@@ -229,7 +229,7 @@ HomeAsset::register($this);
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">Join the millions of people who trust Challonge to manage their tournaments.</p>
                 </div>
             </div>
         </div>
@@ -250,14 +250,16 @@ HomeAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h2 class="logo"><a href=""> LOGO </a></h2>
+                  <!-- <h2 class="logo"><a href=""> LOGO </a></h2> -->
+                  <br><br><br>
+                  <img src="images/webb.png" class="img-responsive" >
                 </div>
                 <div class="col-sm-2">
                     <h5>Get started</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-sm-2">
@@ -265,7 +267,7 @@ HomeAsset::register($this);
                     <ul>
                         <li><a href="#">Company Information</a></li>
                         <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                       
                     </ul>
                 </div>
                 <div class="col-sm-2">
@@ -273,7 +275,7 @@ HomeAsset::register($this);
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -282,7 +284,8 @@ HomeAsset::register($this);
                         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
                     </div>
-                    <button type="button" class="btn btn-default">Contact us</button>
+                    <button type="button" class="btn btn-default" >Contact us</button>
+
                 </div>
             </div>
         </div>

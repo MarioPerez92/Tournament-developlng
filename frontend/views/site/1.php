@@ -34,7 +34,7 @@ $this->title = 'My Yii Application';
                 <!--<p class="lead">The difference between success and  failure is a great team.</p> -->
                 <div class="centered">
 
-                  <p><a class="btn btn-lg btn-success" href="/es/site/signup" title="Programe su primera reunión">Get started</a></p>
+                  <p><a class="btn btn-lg btn-success" href="index.php?r=tournaments" title="Programe su primera reunión">Enjoy</a></p>
                 </div>
           </div> <!-- end jumbo -->
       </div>
@@ -64,7 +64,7 @@ $this->title = 'My Yii Application';
                 <!--<p class="lead">The difference between success and  failure is a great team.</p> -->
                 <div class="centered">
 
-                  <p><a class="btn btn-lg btn-success" href="/es/site/signup" title="Programe su primera reunión">Get started</a></p>
+                  <p><a class="btn btn-lg btn-success" href="index.php?r=tournaments" title="Programe su primera reunión">Enjoy</a></p>
                 </div>
           </div> <!-- end jumbo -->
       </div>
@@ -96,7 +96,7 @@ $this->title = 'My Yii Application';
                 <!--<p class="lead">The difference between success and  failure is a great team.</p> -->
                 <div class="centered">
 
-                  <p><a class="btn btn-lg btn-success" href="/es/site/signup" title="Programe su primera reunión">Get started</a></p>
+                  <p><a class="btn btn-lg btn-success" href="index.php?r=tournaments" title="Programe su primera reunión">Enjoy</a></p>
                 </div>
           </div> <!-- end jumbo -->
       </div>
@@ -126,7 +126,7 @@ $this->title = 'My Yii Application';
                 <!--<p class="lead">The difference between success and  failure is a great team.</p> -->
                 <div class="centered">
 
-                  <p><a class="btn btn-lg btn-success" href="/es/site/signup" title="Programe su primera reunión">Get started</a></p>
+                  <p><a class="btn btn-lg btn-success" href="index.php?r=tournaments" title="Programe su primera reunión">Enjoy</a></p>
                 </div>
           </div> <!-- end jumbo -->
       </div>
