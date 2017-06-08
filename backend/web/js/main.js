@@ -20,8 +20,7 @@ function saveFn(data, userData) {
   //console.log('json es: '+json)             
   //$.post("index.php?r=lan-brackets%2Fview"+"&id="+ retParam("id"), {'data':json});
   $.post("index.php?r=tournaments%2Fview"+"&id="+ retParam("id"), {'data':json});
-  autoCompleteData = data;                                
-
+  autoCompleteData = data;
 } 
  
 function  retParam(name)
@@ -193,14 +192,20 @@ function verBracket(){
   })
 }
 
-$(document).ready(function() {
-  
-  
-  
+
+
+$(document).ready(function() {  
   //console.log(autoCompleteData)
   console.log('hi')
-  if($('#autoComplete').attr('name')=="admin"){
-    generarBracket();
+  //if($('#autoComplete').attr('name')=="admin"){
+  //console.log($('#autoComplete').attr('name'));
+  if($('#autoComplete').attr('name')=="bracket"){
+    console.log('vBracket: '+vBracket)
+    if(vBracket==1)
+      generarBracket();
+    else if(vBracket==2)
+      verBracket();
+  //}else if($('#autoComplete').attr('name')=="view"){
   }else if($('#autoComplete').attr('name')=="view"){
     verBracket();
   }

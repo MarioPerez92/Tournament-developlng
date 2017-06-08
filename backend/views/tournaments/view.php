@@ -5,8 +5,8 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Tournaments */
-
-$this->title = $model->tournament_id;
+$soyAdmin=true;
+$this->title = $model->tournament_name;
 $this->params['breadcrumbs'][] = ['label' => 'Tournaments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+        <?php echo '<button id="reset-bracket" class="btn btn-default">Balanced sorting</button>'; ?>
         <?= Html::a('Update', ['update', 'id' => $model->tournament_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->tournament_id], [
             'class' => 'btn btn-danger',
@@ -22,13 +23,38 @@ $this->params['breadcrumbs'][] = $this->title;
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
-        ]) ?>
+        ]) 
+        ?>
     </p>
 
+     <?php 
+        if($soyAdmin==true){
+          echo '
+          <script type="text/javascript">
+              var vBracket=1;
+          </script>';
+        }else{
+          echo '
+          <script type="text/javascript">
+              var vBracket=2;
+          </script>';
+        }
+     ?>
+    <?php
+    //DIBUJAR BRACKET   
+    echo '
+        <script type="text/javascript">
+            var autoCompleteData = '.$model->tournament_json.';
+        </script>';
+    ?>
+   
+   <div id="autoComplete" name='bracket'>    
+    </div>
+    
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'tournament_id',
+            //'tournament_id',
             'tournament_name',
             'tournament_description:ntext',
             'tournament_status',
@@ -37,25 +63,11 @@ $this->params['breadcrumbs'][] = $this->title;
             //'tournament_json:ntext',
         ],
     ]) ?>
-
-</div>
-
-<?php echo 'ADMIN: '.$model->tournament_admin; ?>
-<!-->Agregar desde aqui </-->
-<?php   
-echo '
-    <script type="text/javascript">
-        var autoCompleteData = '.$model->tournament_json.';
-    </script>';
-?>
-<div>
-    <button id="reset-bracket" class='btn btn-default'>Balanced sorting</button>
-    <br>
     
-    <br>
 </div>
-<div id="autoComplete" name="admin">    
-</div>
+
+
+
 
 <?php 
 //Pjax::begin();
@@ -69,13 +81,14 @@ if(Yii::$app->request->post('data'))
   //echo "modificado su json es: ".$json."<br>";
 
   $connection = Yii::$app->getDb();
-  $command = $connection->createCommand(
-    "UPDATE tournaments SET tournament_json = '".$json."' WHERE tournament_id = " . $id
-  );
-  $result = $command->queryAll();
+
+  $connection->createCommand()->update('tournaments', ['tournament_json' => $json], 'tournament_id='.$id)->execute();
+
 }
 //Pjax::end();
 ?>
+
+
 
 <div id="disqus_thread"></div>
 <script>
