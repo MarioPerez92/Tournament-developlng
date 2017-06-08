@@ -1,0 +1,210 @@
+
+
+/* CSS used here will be applied after bootstrap.css */
+body {
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+
+.wrap > .container_home {
+    padding: 10px 15px 20px;
+    margin-top:50px;
+}
+
+.home-top {
+  margin-top:16%;
+}
+
+.video-top {
+  margin-top:23%;
+}
+
+.panel-default {
+ opacity: 0.9;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    border-radius:5px;
+    padding-top:15px;
+    padding-bottom:1px;
+}
+.jumbotron h1 {
+  font-size:40px;
+}
+.jumbotron .lead {
+  color:#fff;
+}
+.jumbotron p.lead {
+  font-size: 24px;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    opacity:.8;
+    margin:25px;
+}
+
+ul.auth-clients {
+  margin-bottom:0;
+}
+
+@media only screen
+and (max-width: 992px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .jumbotron p.lead {
+    font-size: 28px;
+  }
+  .hiw-visual-first,.hiw-visual-second img {
+    padding:0 10% 0 10%;
+  }
+}
+@media only screen
+and (min-width: 993px)
+and (max-width: 1029px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .jumbotron h1 {
+    font-size:48px;
+  }
+
+  li.auth-client {
+    margin-right:3px !important;
+    padding-right:0px !important;
+  }
+
+  ul.auth-clients {
+    -webkit-padding-start: 3px !important;
+  }
+  .panel-auth-clients {
+    padding: 25px 15px;
+  }
+
+
+}
+@media only screen
+and (min-width: 1028px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .jumbotron h1 {
+    font-size:48px;
+  }
+
+  li.auth-client {
+    margin-right:3px !important;
+    padding-right:1px !important;
+  }
+  ul.auth-clients {
+    -webkit-padding-start: 10px !important;
+  }
+  .panel-auth-clients {
+    padding: 25px 15px;
+  }
+
+}
+@media only screen
+and (min-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .firstpanel {
+    margin-top:300px;
+  }
+
+  li.auth-client {
+    padding-right:10px !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+.clients {
+    overflow:auto;
+}
+
+.auth-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('./authchoice.png') no-repeat;
+}
+
+.auth-icon.google, 
+.auth-icon.google_openid,
+.auth-icon.google_oauth {
+    background-position: 0 -34px;
+}
+.auth-icon.twitter {
+    background-position: 0 -68px;
+}
+.auth-icon.yandex,
+.auth-icon.yandex_openid,
+.auth-icon.yandex_oauth {
+    background-position: 0 -102px;
+}
+.auth-icon.vkontakte {
+    background-position: 0 -136px;
+}
+.auth-icon.facebook {
+    background-position: 0 -170px;
+}
+.auth-icon.mailru {
+    background-position: 0 -204px;
+}
+.auth-icon.moikrug {
+    background-position: 0 -238px;
+}
+.auth-icon.odnoklassniki {
+    background-position: 0 -272px;
+}
+.auth-icon.linkedin {
+    background-position: 0 -306px;
+}
+.auth-icon.github {
+    background-position: 0 -340px;
+}
+.auth-icon.live {
+    background-position: 0 -372px;
+}
+
+.auth-link:hover .auth-icon i,
+.auth-link:focus .auth-icon i {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('./authchoice.png') 0 0 no-repeat;
+}
+
+.auth-clients {
+    margin: 0 0 1em;
+    list-style: none;
+    overflow: auto;
+}
+
+.auth-client {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.auth-clients .auth-client .auth-link {
+    display: block;
+    width: 58px;
+}
+
+.auth-client .auth-link .auth-icon {
+    margin: 0 auto;
+}
+
+.auth-client .auth-link .auth-title {
+    display: block;
+    margin-top: 0.4em;
+    text-align: center;
+}

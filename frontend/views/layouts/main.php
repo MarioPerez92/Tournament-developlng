@@ -28,12 +28,13 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => Html::img('@web/images/webb.png', ['alt'=>Yii::$app->homeUrl]),
+        //'brandOptions' => ['class' => 'myclass'],//options of the brand
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
+        'class' => 'navbar-inverse navbar-fixed-top',//options of the navbar
+  ],
+]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
@@ -52,9 +53,24 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+
+
+
+
+    
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'encodeLabels' => false,
+    'items' => [
+        ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
+        ['label' => '<span class="glyphicon glyphicon-phone-alt"></span> About', 'url' => ['/site/about']],
+        ['label' => '<span class="glyphicon glyphicon-envelope"></span> Contact', 'url' => ['/site/contact']],
+        Yii::$app->user->isGuest ?
+            ['label' => '<span class="glyphicon glyphicon-user"></span> Login', 'url' => ['/site/login']] :
+            ['label' => '<span class="glyphicon glyphicon-off"></span> Logout (' . Html::encode(Yii::$app->user->identity->username) . ')',
+                'url' => ['/site/logout'],
+                'linkOptions' => ['data-method' => 'post']],
+    ],
     ]);
     NavBar::end();
     ?>

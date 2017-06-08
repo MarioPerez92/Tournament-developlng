@@ -30,10 +30,10 @@ HomeAsset::register($this);
     <link rel="stylesheet" href="assets/97c38de7/css/Footer-with-button-logo.css">
 
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/97c38de7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -106,12 +106,17 @@ HomeAsset::register($this);
         ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
         ['label' => '<span class="glyphicon glyphicon-phone-alt"></span> About', 'url' => ['/site/about']],
         ['label' => '<span class="glyphicon glyphicon-envelope"></span> Contact', 'url' => ['/site/contact']],
+       // ['label' => '<span class="glyphicon glyphicon-plus"></span> Signup', 'url' => ['/site/contact']],
         Yii::$app->user->isGuest ?
             ['label' => '<span class="glyphicon glyphicon-user"></span> Login', 'url' => ['/site/login']] :
             ['label' => '<span class="glyphicon glyphicon-off"></span> Logout (' . Html::encode(Yii::$app->user->identity->username) . ')',
                 'url' => ['/site/logout'],
                 'linkOptions' => ['data-method' => 'post']],
+
+       ['label' => '<span class="glyphicon glyphicon-plus"></span> Signup', 'url' => ['/site/contact']],
     ],
+
+
     ]);
     NavBar::end();
 ?>
@@ -184,16 +189,16 @@ HomeAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h2 class="section-heading">Amazing Team</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
+                        <img src="images/Barcenas.png" class="img-responsive img-circle" alt="">
+                        <h4>Luis Barcenas</h4>
+                        <p class="text-muted">Web developer</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -204,11 +209,11 @@ HomeAsset::register($this);
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
+                        <img src="images/Marioso.png" class="img-responsive img-circle" alt="">
+                        <h4>Mario Perez</h4>
+                        <p class="text-muted">Web developer</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -219,21 +224,7 @@ HomeAsset::register($this);
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+              
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
